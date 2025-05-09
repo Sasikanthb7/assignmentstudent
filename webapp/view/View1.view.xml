@@ -1,0 +1,43 @@
+<mvc:View controllerName="studentapp.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:sf="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <sf:SimpleForm title="Student Enrollment form">
+        </sf:SimpleForm>
+        <content>
+            <VBox >
+                <HBox >
+                    <Label text="Studentname" design="Bold" required="true" textAlign="Center" />
+                    <Input id="inSname" placeholder="Studentname" width="70%"/>
+                </HBox>
+                <HBox>
+                    <Label text="Phone Number" design="Bold" required="true" textAlign="Center" />
+                    <Input id="inPhone" placeholder="Phone Number" width="70%"/>
+                </HBox>
+                <HBox>
+                    <Label text="Department" design="Bold" required="true" textAlign="Center" />
+                    <!-- <Input id="InDept" placeholder="Department" width="70%"/> -->
+                    <RadioButton groupName="sapMRbDefaultGroup" text="Engineering" selected="true" />
+                    <RadioButton groupName="sapMRbDefaultGroup" text="Medical" />
+                </HBox>
+                <HBox>
+                    <Label text="Date of Birth" design="Bold" required="true" textAlign="Center" />
+                    <!-- <Input id="InDob" placeholder="Date of Birth" width="70%" /> -->
+                    <DatePicker minDate=""/>
+                </HBox>
+            </VBox>
+        </content>
+        <footer>
+            <Bar design="Footer">
+                <contentLeft>
+                    <Button id="btnSave" text="Save" press="onSave" type="Emphasized" icon="sap-icon://save"/>
+                </contentLeft>
+                <contentRight>
+                    <Button id="btnRefresh" text="Refresh" press="OnRefresh" type="Negative" icon="sap-icon://refresh"/>
+
+                </contentRight>
+            </Bar>
+        </footer>
+    </Page>
+</mvc:View>
